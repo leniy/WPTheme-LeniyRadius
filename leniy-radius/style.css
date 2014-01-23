@@ -4,12 +4,12 @@ Theme URI: http://blog.leniy.org/wordpress-theme-leniyradius.html
 Author: Leniy
 Author URI: http://blog.leniy.org
 Description: Leniy Radius, a HTML5+CSS3 responsive WordPress blog theme. With custom head, custom background, page template, featured posts, social icons, threaded comments and widget support.
-Version: 1.0
+Version: 1.0.2
 License: GNU General Public License
 License URI: license.txt
 Text Domain: leniyradius
 Domain Path: /languages/
-Tags: light,two-columns,fixed-layout,one-column, two-columns, right-sidebar, fluid-layout, custom-header, custom-menu, editor-style, featured-images, sticky-post
+Tags: light,one-column, two-columns, right-sidebar,fixed-layout, fluid-layout,responsive-layout, custom-header, custom-menu,custom-background, custom-colors, sticky-post, translation-ready,accessibility-ready, editor-style, featured-image-header, featured-images, flexible-header, full-width-template, post-formats, rtl-language-support, theme-options, threaded-comments
 
 Leniy Radius, a HTML5+CSS3 responsive WordPress blog theme. With custom head, custom background, page template, featured posts, social icons, threaded comments and widget support.
 
@@ -778,34 +778,34 @@ blockquote cite {
 	display: table;
 	width: 100%;
 }
-.nav-menu{
+.main-navigation .menu{
 	width: 100%;
 	font-size: 14px;
 	background: rgba(238,238,238,0.1);
 	margin: 0;
 }
-.nav-menu,.nav-menu ul{
+.main-navigation  .menu,.main-navigation  .menu ul{
   list-style: none;
 }
-.nav-menu, .nav-menu > li {
+.main-navigation  .menu, .main-navigation  .menu > li {
   float: left;
 }
-.nav-menu li a{
+.main-navigation  .menu li a{
 	display: block;
 	line-height: 30px;
 	text-decoration: none;
 	color:rgb(82, 69, 69);
 	padding:0 12px;
 }
-.nav-menu li a:hover,
-.nav-menu li:hover a{
+.main-navigation  .menu li a:hover,
+.main-navigation  .menu li:hover a{
 	background-color:#262626;
 	color:#eee
 }
-.nav-menu li.current-menu-item a,
-.nav-menu li.current-menu-parent a,
-.nav-menu li.current_page_item a,
-.nav-menu li.current-post-ancestor a{
+.main-navigation  .menu li.current-menu-item a,
+.main-navigation  .menu li.current-menu-parent a,
+.main-navigation  .menu li.current_page_item a,
+.main-navigation  .menu li.current-post-ancestor a{
 	color:#f5f5f5;
 	background-color:#262626;
 	position:relative;
@@ -822,7 +822,7 @@ blockquote cite {
 	border-radius: 0 2px 2px 2px;
 	margin: 0;
 }
-.nav-menu li:hover .sub-menu{
+.main-navigation  .menu li:hover .sub-menu{
 	display:block
 }
 .sub-menu li{

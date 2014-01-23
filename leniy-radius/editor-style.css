@@ -1,0 +1,12 @@
+/*
+Theme Name: Leniy Radius
+
+Style the editor's content.
+*/
+
+* {
+    font: 12px "MicroSoft YaHei", Arial, sans-serif;
+}
+h1 {font-size: 16px;}
+h2 {font-size: 14px;}
+h3 {font-size: 12px;}

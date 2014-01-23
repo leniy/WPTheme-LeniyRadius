@@ -67,6 +67,15 @@ function leniyradius_wp_title( $title, $sep ) {
 }
 add_filter( 'wp_title', 'leniyradius_wp_title', 10, 2 );
 
+function leniyradius_title( $title ) {
+	if ( $title == '' ) {
+		return __( 'Untitled', 'leniyradius' );
+	} else {
+		return $title;
+	}
+}
+add_filter( 'the_title', 'leniyradius_title' );
+
 /**
  * Sets the authordata global when viewing an author archive.
  *

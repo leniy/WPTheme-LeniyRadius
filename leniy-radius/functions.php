@@ -16,6 +16,7 @@ function leniyradius_setup() {
 
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'post-thumbnails' );
+	add_editor_style();
 
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'leniyradius' ),
@@ -25,7 +26,7 @@ function leniyradius_setup() {
 
 	add_theme_support( 'custom-background', apply_filters( 'leniyradius_custom_background_args', array(
 		'default-color' => 'ffffff',
-		'default-image' => get_template_directory_uri() .'/images/default_bg.png',
+		'default-image' => get_template_directory_uri() .'/images/default_bg.jpg',
 	) ) );
 }
 endif; // leniyradius_setup

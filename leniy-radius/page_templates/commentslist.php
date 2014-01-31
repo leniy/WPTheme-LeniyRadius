@@ -1,14 +1,15 @@
 <?php
 /**
  * @package Leniy Radius
+ *
+ * Template Name: One hundred new comments
  */
-/*
-Template Name: One hundred new comments
-*/
-?>
-<?php get_header(); ?>
-<div id="primary" class="content-area">
-	<div id="content" class="site-content" role="main">
+
+get_header(); ?>
+	<div id="primary" class="fullwidth-content-area">
+		<main id="main" class="fullwidth-site-main" role="main">
+
+
 	<article class="page type-page">
 		<h2>
 			<p style="text-align:center"><?php _e('One hundred new comments', 'leniyradius' ); ?></p>
@@ -58,7 +59,9 @@ Template Name: One hundred new comments
 			</table>
 		</div>
 	</article>
-	</div>
-</div>
-<?php get_sidebar(); ?>
+
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
 <?php get_footer(); ?>

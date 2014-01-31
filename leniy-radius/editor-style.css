@@ -5,8 +5,18 @@ Style the editor's content.
 */
 
 * {
-    font: 12px "MicroSoft YaHei", Arial, sans-serif;
+	font-family: "MicroSoft YaHei", Arial, sans-serif;
+	color: #222222;
+	font-size: 12px;
 }
-h1 {font-size: 16px;}
-h2 {font-size: 14px;}
-h3 {font-size: 12px;}
+
+h1,h2,h3,h4,h5,h6 {
+	font-weight:bold;
+}
+
+h1{font-size:24px;line-height:30px;}
+h2{font-size:20px;line-height:26px;}
+h3{font-size:16px;line-height:24px;}
+h4{font-size:14px;line-height:20px;}
+h5{font-size:14px;line-height:20px;}
+h6{font-size:14px;line-height:20px;}

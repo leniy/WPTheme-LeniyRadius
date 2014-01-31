@@ -1,15 +1,16 @@
 <?php
 /**
  * @package Leniy Radius
+ *
+ * Template Name: Comments Chart
  */
-/*
-Template Name: Comments Chart
-*/
-?>
-<?php get_header(); ?>
-<div id="primary" class="content-area">
-	<div id="content" class="site-content" role="main">
-	<div class="type-page">
+
+get_header(); ?>
+
+	<div id="primary" class="fullwidth-content-area">
+		<main id="main" class="fullwidth-site-main" role="main">
+
+	<div class="page type-page">
 			<?php $sourcepage = 'http://blog.leniy.org/wordpress-comment-chart.html'; ?>
 			<p style="text-align:center"><?php _e('Want to leave a comments? Go here:', 'leniyradius' ); ?><a href="<?php echo $sourcepage; ?>" target="_blank"><?php echo $sourcepage; ?></a></p>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -86,7 +87,7 @@ Template Name: Comments Chart
 	}
 </script>
 	</div>
-	</div>
-</div>
-<?php get_sidebar(); ?>
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
 <?php get_footer(); ?>

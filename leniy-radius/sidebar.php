@@ -7,6 +7,7 @@
 ?>
 	<div id="secondary" class="widget-area" role="complementary">
 		<?php do_action( 'before_sidebar' ); ?>
+		<div class="widget-area1">
 		<?php if ( ! dynamic_sidebar( 'leniyradius_sidebarupper' ) ) : ?>
 
 			<aside id="search" class="widget widget_search">
@@ -19,7 +20,9 @@
 				</ul>
 			</aside>
 		<?php endif; // end sidebar widget area ?>
+		</div>
 
+		<div class="widget-area2">
 		<?php if ( ! dynamic_sidebar( 'leniyradius_sidebarlower' ) ) : ?>
 
 			<aside id="meta" class="widget">
@@ -32,4 +35,5 @@
 			</aside>
 
 		<?php endif; // end sidebar widget area ?>
+		</div>
 	</div><!-- #secondary -->

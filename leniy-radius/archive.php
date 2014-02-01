@@ -69,6 +69,7 @@ get_header(); ?>
 					?>
 				</h1>
 				<?php
+					// Show an optional term description.
 					$term_description = term_description();
 					if ( ! empty( $term_description ) ) :
 						printf( '<div class="taxonomy-description">%s</div>', $term_description );
@@ -77,9 +78,7 @@ get_header(); ?>
 			</header><!-- .page-header -->
 
 			<?php while ( have_posts() ) : the_post(); ?>
-
 				<?php get_template_part( 'content', get_post_format() ); ?>
-
 			<?php endwhile; ?>
 
 			<?php leniyradius_paging_nav(); ?>

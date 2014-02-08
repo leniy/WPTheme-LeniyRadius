@@ -4,7 +4,7 @@ Theme URI: http://blog.leniy.org/wordpress-theme-leniyradius.html
 Author: Leniy
 Author URI: http://blog.leniy.org
 Description: Leniy Radius, a HTML5+CSS3 responsive WordPress blog theme. With custom head, custom background, page template, featured posts, social icons, threaded comments and widget support.
-Version: 2.0.1
+Version: 2.0.2
 License: GNU General Public License
 License URI: license.txt
 Text Domain: leniyradius
@@ -15,8 +15,7 @@ Leniy Radius, a HTML5+CSS3 responsive WordPress blog theme. With custom head, cu
 
 */
 
-
-/* =Reset derived from Underscores
+/* =Reset
 -------------------------------------------------------------- */
 
 html, body, div, span, applet, object, iframe,
@@ -1262,7 +1261,10 @@ div.wumii-related-items-div div.wumii-footer {
 
 
 
-
+/*
+Some php code and css code of Theme Leniy Radius, is derived from Underscores Theme, (c) Automattic, Inc, 2013
+Underscores Theme is distributed under the terms of the GPL
+*/
 
 
 

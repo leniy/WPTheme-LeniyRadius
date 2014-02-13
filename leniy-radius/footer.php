@@ -14,15 +14,28 @@
 		<div class="site-info">
 			<?php do_action( 'leniyradius_credits' ); ?>
 			<?php
-				$begin = $wpdb->get_results("SELECT MIN(post_date) AS MIM_d FROM $wpdb->posts WHERE (post_type = 'post' OR post_type = 'page') AND (post_status = 'publish' OR post_status = 'private')");
-				$begin = date('Y', strtotime($begin[0]->MIM_d));
-				$last = $wpdb->get_results("SELECT MAX(post_modified) AS MAX_m FROM $wpdb->posts WHERE (post_type = 'post' OR post_type = 'page') AND (post_status = 'publish' OR post_status = 'private')");
-				$last = date('Y', strtotime($last[0]->MAX_m));
-				echo "CopyRight &copy; " . $begin . "-" . $last . " " . get_bloginfo('name');
+				global $wpdb;
+				$copyright_dates = $wpdb->get_results("
+					SELECT 
+						YEAR(min(post_date)) AS firstdate, 
+						YEAR(max(post_date)) AS lastdate 
+					FROM 
+						$wpdb->posts
+					WHERE post_status = 'publish'
+				");
+				if($copyright_dates) {
+					$date = date('Y-m-d');
+					$date = explode('-', $date);
+					$copyright = "Copyright &copy; " . $copyright_dates[0]->firstdate;
+					if($copyright_dates[0]->firstdate != $date[0]) {
+						$copyright .= '-' . $date[0];
+					}
+					echo $copyright . " " . get_bloginfo('name');
+				}
 			?>
 			<span class="sep"> | </span>
 			<?php if( 'zh_CN' == constant('WPLANG') ): ?>
-			<?php _e('Lu ICP bei xxooxxoo hao', 'leniyradius' ); /* In China, a site must have a ICP id */?>
+			<?php _e('Lu ICP bei xxooxxoo hao', 'leniyradius' ); /* In China, a site must have an ICP id */?>
 			<span class="sep"> | </span>
 			<?php endif; ?>
 			<?php printf( __( 'Theme: %1$s v%2$s by <a href="%3$s" rel="designer">%4$s</a>.', 'leniyradius' ),

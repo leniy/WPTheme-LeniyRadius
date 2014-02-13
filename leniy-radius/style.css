@@ -4,20 +4,45 @@ Theme URI: http://blog.leniy.org/wordpress-theme-leniyradius.html
 Author: Leniy
 Author URI: http://blog.leniy.org
 Description: Leniy Radius, a HTML5+CSS3 responsive WordPress blog theme. With custom head, custom background, page template, featured posts, social icons, threaded comments and widget support.
-Version: 2.0.2
+Version: 2.0.5
 License: GNU General Public License
-License URI: license.txt
+License URI: http://www.gnu.org/licenses/gpl.html
 Text Domain: leniyradius
 Domain Path: /languages/
-Tags: light,one-column, two-columns, right-sidebar,fixed-layout, fluid-layout,responsive-layout, custom-header, custom-menu,custom-background, custom-colors, sticky-post, translation-ready,accessibility-ready, editor-style, featured-image-header, featured-images, flexible-header, full-width-template, post-formats, rtl-language-support, theme-options, threaded-comments
+Tags: light,one-column, two-columns, right-sidebar,fixed-layout, fluid-layout,responsive-layout, custom-header, custom-menu,custom-background, custom-colors, sticky-post, translation-ready, editor-style, featured-image-header, featured-images, flexible-header, full-width-template, post-formats, rtl-language-support, theme-options, threaded-comments
 
 Leniy Radius, a HTML5+CSS3 responsive WordPress blog theme. With custom head, custom background, page template, featured posts, social icons, threaded comments and widget support.
 
+Leniy Radius WordPress Theme, Copyright 2006-2014 Leniy.org
+Leniy Radius is distributed under the terms of the GNU GPL
+
 */
 
-/* =Reset
--------------------------------------------------------------- */
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 - Reset
+2.0 - Typography
+3.0 - Elements
+4.0 - Inputs and buttons
+5.0 - Navigation
+	5.1 - Links
+	5.2 - Menus
+6.0 - Accessibility
+7.0 - Alignments
+8.0 - Clearings
+9.0 - Widgets
+10.0 - Content
+	10.1 - Posts and pages
+	10.2 - Asides
+	10.3 - Comments
+11.0 - Infinite scroll
+12.0 - Media
+--------------------------------------------------------------*/
 
+/*--------------------------------------------------------------
+1.0 - Reset
+--------------------------------------------------------------*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -93,10 +118,9 @@ a img {
 	border: 0;
 }
 
-
-/* =Global
------------------------------------------------ */
-
+/*--------------------------------------------------------------
+2.0 Typography
+--------------------------------------------------------------*/
 body,
 button,
 input,
@@ -108,41 +132,11 @@ textarea {
 	font-size: 1.6rem;
 	line-height: 1.5;
 }
-
-/* Headings */
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
 }
-hr {
-	background-color: #ccc;
-	border: 0;
-	height: 1px;
-	margin-bottom: 1.5em;
-}
-
-/* Text elements */
 p {
 	margin-bottom: 1.5em;
-}
-ul, ol {
-	margin: 0 0 1.5em 3em;
-}
-ul {
-	list-style: disc;
-}
-ol {
-	list-style: decimal;
-}
-li > ul,
-li > ol {
-	margin-bottom: 0;
-	margin-left: 1.5em;
-}
-dt {
-	font-weight: bold;
-}
-dd {
-	margin: 0 1.5em 1.5em;
 }
 b, strong {
 	font-weight: bold;
@@ -198,6 +192,36 @@ small {
 big {
 	font-size: 125%;
 }
+
+/*--------------------------------------------------------------
+3.0 Elements
+--------------------------------------------------------------*/
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+ul, ol {
+	margin: 0 0 1.5em 3em;
+}
+ul {
+	list-style: disc;
+}
+ol {
+	list-style: decimal;
+}
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+dt {
+	font-weight: bold;
+}
+dd {
+	margin: 0 1.5em 1.5em;
+}
 figure {
 	margin: 0;
 }
@@ -208,10 +232,10 @@ table {
 th {
 	font-weight: bold;
 }
-img {
-	height: auto; /* Make sure images are scaled correctly. */
-	max-width: 100%; /* Adhere to container width. */
-}
+
+/*--------------------------------------------------------------
+4.0 Inputs and buttons
+--------------------------------------------------------------*/
 button,
 input,
 select,
@@ -307,7 +331,12 @@ textarea {
 	width: 98%;
 }
 
-/* Links */
+/*--------------------------------------------------------------
+5.0 Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+5.1 Links
+--------------------------------------------------------------*/
 a {
 	color: royalblue;
 }
@@ -320,80 +349,9 @@ a:active {
 	color: midnightblue;
 }
 
-/* Alignment */
-.alignleft {
-	display: inline;
-	float: left;
-	margin-right: 1.5em;
-}
-.alignright {
-	display: inline;
-	float: right;
-	margin-left: 1.5em;
-}
-.aligncenter {
-	clear: both;
-	display: block;
-	margin: 0 auto;
-}
-
-/* Text meant only for screen readers */
-.screen-reader-text {
-	clip: rect(1px, 1px, 1px, 1px);
-	position: absolute !important;
-}
-
-.screen-reader-text:hover,
-.screen-reader-text:active,
-.screen-reader-text:focus {
-	background-color: #f1f1f1;
-	border-radius: 3px;
-	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-	clip: auto !important;
-	color: #21759b;
-	display: block;
-	font-size: 14px;
-	font-weight: bold;
-	height: auto;
-	left: 5px;
-	line-height: normal;
-	padding: 15px 23px 14px;
-	text-decoration: none;
-	top: 5px;
-	width: auto;
-	z-index: 100000; /* Above WP toolbar */
-}
-
-/* Clearing */
-.clear:before,
-.clear:after,
-.entry-content:before,
-.entry-content:after,
-.comment-content:before,
-.comment-content:after,
-.site-header:before,
-.site-header:after,
-.site-content:before,
-.site-content:after,
-.site-footer:before,
-.site-footer:after {
-	content: '';
-	display: table;
-}
-
-.clear:after,
-.entry-content:after,
-.comment-content:after,
-.site-header:after,
-.site-content:after,
-.site-footer:after {
-	clear: both;
-}
-
-
-/* =Menu
------------------------------------------------ */
-
+/*--------------------------------------------------------------
+5.2 Menus
+--------------------------------------------------------------*/
 .main-navigation {
 	clear: both;
 	display: block;
@@ -443,13 +401,11 @@ a:active {
 .main-navigation .current_page_item a,
 .main-navigation .current-menu-item a {
 }
-
 /* Small menu */
 .menu-toggle {
 	cursor: pointer;
 	display: none;
 }
-
 @media screen and (max-width: 600px) {
 	.menu-toggle,
 	.main-navigation.toggled .nav-menu {
@@ -460,11 +416,126 @@ a:active {
 		display: none;
 	}
 }
+.site-main .comment-navigation,
+.site-main .paging-navigation,
+.site-main .post-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+.comment-navigation .nav-previous,
+.paging-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float: left;
+	width: 50%;
+}
+.comment-navigation .nav-next,
+.paging-navigation .nav-next,
+.post-navigation .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
 
+/*--------------------------------------------------------------
+6.0 Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+}
 
-/* =Content
------------------------------------------------ */
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar */
+}
 
+/*--------------------------------------------------------------
+7.0 Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 0 auto;
+}
+
+/*--------------------------------------------------------------
+8.0 Clearings
+--------------------------------------------------------------*/
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+	content: '';
+	display: table;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+	clear: both;
+}
+
+/*--------------------------------------------------------------
+9.0 Widgets
+--------------------------------------------------------------*/
+.widget {
+	margin: 0 0 1.5em;
+}
+
+/* Make sure select elements fit in widgets */
+.widget select {
+	max-width: 100%;
+}
+
+/* Search widget */
+.widget_search .search-submit {
+	display: none;
+}
+
+/*--------------------------------------------------------------
+10.0 Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+10.1 Posts and pages
+--------------------------------------------------------------*/
 .sticky {
 }
 .hentry {
@@ -488,19 +559,39 @@ a:active {
 	margin: 0 0 1.5em;
 }
 
-
-/* =Asides
------------------------------------------------ */
-
+/*--------------------------------------------------------------
+10.2 Asides
+--------------------------------------------------------------*/
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
 	display: none;
 }
 
+/*--------------------------------------------------------------
+10.3 Comments
+--------------------------------------------------------------*/
+.comment-content a {
+	word-wrap: break-word;
+}
+.bypostauthor {
+}
 
-/* =Media
------------------------------------------------ */
+/*--------------------------------------------------------------
+11.0 Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .paging-navigation, /* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
+	display: none;
+}
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
 
+/*--------------------------------------------------------------
+12.0 Media
+--------------------------------------------------------------*/
 .page-content img.wp-smiley,
 .entry-content img.wp-smiley,
 .comment-content img.wp-smiley {
@@ -542,76 +633,12 @@ a:active {
 }
 .site-main .gallery-columns-4 .gallery-item img {
 }
-
 /* Make sure embeds and iframes fit their containers */
 embed,
 iframe,
 object {
 	max-width: 100%;
 }
-
-
-/* =Navigation
------------------------------------------------ */
-
-.site-main [class*="navigation"] {
-	margin: 0 0 1.5em;
-	overflow: hidden;
-}
-[class*="navigation"] .nav-previous {
-	float: left;
-	width: 50%;
-}
-[class*="navigation"] .nav-next {
-	float: right;
-	text-align: right;
-	width: 50%;
-}
-
-
-/* =Comments
------------------------------------------------ */
-
-.comment-content a {
-	word-wrap: break-word;
-}
-.bypostauthor {
-}
-
-
-/* =Widgets
------------------------------------------------ */
-
-.widget {
-	margin: 0 0 1.5em;
-}
-
-/* Make sure select elements fit in widgets */
-.widget select {
-	max-width: 100%;
-}
-
-/* Search widget */
-.widget_search .search-submit {
-	display: none;
-}
-
-
-/* =Infinite Scroll
------------------------------------------------ */
-
-/* Globally hidden elements when Infinite Scroll is supported and in use. */
-.infinite-scroll .paging-navigation, /* Older / Newer Posts Navigation (always hidden) */
-.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
-	display: none;
-}
-
-/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
-.infinity-end.neverending .site-footer {
-	display: block;
-}
-
-
 
 
 
@@ -907,6 +934,10 @@ blockquote {
 	border-radius: 10px;
 	padding-bottom: 10px;
 	margin-bottom: 10px;
+}
+img {
+	height: auto;
+	max-width: 100%;
 }
 .entry-content h2 {
 	font-size: 1.5em;
@@ -1265,6 +1296,3 @@ div.wumii-related-items-div div.wumii-footer {
 Some php code and css code of Theme Leniy Radius, is derived from Underscores Theme, (c) Automattic, Inc, 2013
 Underscores Theme is distributed under the terms of the GPL
 */
-
-
-

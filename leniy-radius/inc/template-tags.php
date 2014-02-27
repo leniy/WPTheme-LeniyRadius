@@ -11,9 +11,9 @@ if ( ! function_exists( 'leniyradius_paging_nav' ) ) :
 function leniyradius_paging_nav() {
 	$range = 4;
 	global $paged, $wp_query;
-	if ( !$max_page ) {
+	//if ( !$max_page ) {
 		$max_page = $wp_query->max_num_pages;
-	}
+	//}
 
 	// Don't print empty markup if there's only one page.
 	if ( $max_page < 2 ) { return; }

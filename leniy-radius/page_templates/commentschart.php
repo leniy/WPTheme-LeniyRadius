@@ -20,7 +20,7 @@ get_header(); ?>
 	<?php
 	global $wpdb;
 	$numbers_day   = 30;
-	$numbers_month = 9;
+	$numbers_month = 12;
 	$numbers_user  = 8;
 	$query_day  ="SELECT COUNT(*) AS `cnt` , DATE_FORMAT( `comment_date` , '%Y-%m-%d' ) AS d FROM $wpdb->comments GROUP BY d ORDER BY `d` DESC LIMIT 0 , " . $numbers_day;
 	$query_month="SELECT COUNT(*) AS `cnt` , DATE_FORMAT( `comment_date` , '%Y-%m' )    AS d FROM $wpdb->comments GROUP BY d ORDER BY `d` DESC LIMIT 0 , " . $numbers_month;

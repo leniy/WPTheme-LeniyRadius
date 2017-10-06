@@ -13,13 +13,13 @@ get_header(); ?>
 	<div class="page type-page">
 			<?php $sourcepage = 'http://blog.leniy.org/wordpress-comment-chart.html'; ?>
 			<p style="text-align:center"><?php _e('Want to leave a comments? Go here:', 'leniyradius' ); ?><a href="<?php echo $sourcepage; ?>" target="_blank"><?php echo $sourcepage; ?></a></p>
-<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript" src="https://www.google.cn/jsapi"></script>
 <h2><p style="text-align:center"><?php _e('Active Visitors Rank', 'leniyradius' ); ?></p></h2><div id="chart_user_div" style="width: 640px; height: 400px; margin: auto;"></div>
 <h2><p style="text-align:center"><?php _e('Comments Chart', 'leniyradius' ); ?></p></h2><div id="chart_day_div" style="width: 640px; height: 500px; margin: auto;"></div>
 <h2><p style="text-align:center"><?php _e('Comments Chart', 'leniyradius' ); ?></p></h2><div id="chart_month_div" style="width: 640px; height: 500px; margin: auto;"></div>
 	<?php
 	global $wpdb;
-	$numbers_day   = 30;
+	$numbers_day   = 300;
 	$numbers_month = 12;
 	$numbers_user  = 8;
 	$query_day  ="SELECT COUNT(*) AS `cnt` , DATE_FORMAT( `comment_date` , '%Y-%m-%d' ) AS d FROM $wpdb->comments GROUP BY d ORDER BY `d` DESC LIMIT 0 , " . $numbers_day;

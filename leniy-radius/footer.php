@@ -34,7 +34,7 @@
 				}
 			?>
 			<span class="sep"> | </span>
-			<?php if( 'zh_CN' == constant('WPLANG') ): ?>
+			<?php if( 'zh_CN' == get_option('WPLANG') ): ?>
 			<?php _e('Lu ICP bei xxooxxoo hao', 'leniyradius' ); /* In China, a site must have an ICP id */?>
 			<span class="sep"> | </span>
 			<?php endif; ?>

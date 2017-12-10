@@ -9,6 +9,8 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 640; /* pixels */
 }
 
+add_theme_support( "title-tag" );
+
 if ( ! function_exists( 'leniyradius_setup' ) ) :
 function leniyradius_setup() {
 
